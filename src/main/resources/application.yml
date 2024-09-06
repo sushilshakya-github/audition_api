@@ -2,7 +2,7 @@ info:
   app:
     name: Audition API
     type: REST API
-    platform: Java
+    platform: Java	
 spring:
   application:
     name: audition-api
@@ -21,7 +21,7 @@ spring:
         trace-id-ratio-based: 1.0
       exporter:
         otlp:
-          endpoint: http://collector:4317
+          endpoint: http://collector:4317	
     sampler:
       probability: 1.0
 server:
@@ -35,7 +35,7 @@ management:
       show-details: always
   info:
     env:
-      enabled: true
+      enabled: true			
   endpoints:
     web:
       exposure:
