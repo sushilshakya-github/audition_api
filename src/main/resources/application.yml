@@ -2,7 +2,7 @@ info:
   app:
     name: Audition API
     type: REST API
-    platform: Java	
+    platform: Java
 spring:
   application:
     name: audition-api
@@ -21,7 +21,7 @@ spring:
         trace-id-ratio-based: 1.0
       exporter:
         otlp:
-          endpoint: http://collector:4317	
+          endpoint: http://collector:4317
     sampler:
       probability: 1.0
 server:
@@ -33,9 +33,10 @@ management:
   endpoint:
     health:
       show-details: always
+  health.circuitbreakers.enabled: true
   info:
     env:
-      enabled: true			
+      enabled: true
   endpoints:
     web:
       exposure:
@@ -45,3 +46,14 @@ logging:
     level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
   level:
     com.audition.configuration.RestCallLoggingInterceptor: DEBUG
+resilience4j.circuitbreaker:
+  configs:
+    default:
+      registerHealthIndicator: true
+      slidingWindowSize: 10
+      minimumNumberOfCalls: 5
+      permittedNumberOfCallsInHalfOpenState: 3
+      automaticTransitionFromOpenToHalfOpenEnabled: true
+      waitDurationInOpenState: 5s
+      failureRateThreshold: 50
+      eventConsumerBufferSize: 10

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.audition.service.AuditionServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-09-06T10:25:55" hostname="DESKTOP-SUSHIL" time="0.907">
+  <properties/>
+  <testcase name="getPostById()" classname="com.audition.service.AuditionServiceTest" time="0.823"/>
+  <testcase name="getAllEmployee()" classname="com.audition.service.AuditionServiceTest" time="0.08"/>
+  <system-out><![CDATA[com.audition.model.AuditionPost@7c7a3454
+[com.audition.model.AuditionPost@4e8bc98f, com.audition.model.AuditionPost@4760099b]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
