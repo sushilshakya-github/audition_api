@@ -85,6 +85,7 @@ Below TODO tasks are done -
 4. Actuator setting for info and health endpoints.
 5. Logger and Exception handling.
 6. Junit test cases for positive senarios only.
+7. Circuit breaker implementation
 
 Kindly note, further code optimizations are possible, these are not done due to time constraint. Also, code coverage can be increased by writing negative test cases. Since Gradle and IntelliJ IDEA are new for me, so consumed a significant time to convert pom.xml based Maven project.
 
