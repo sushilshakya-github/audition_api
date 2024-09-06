@@ -86,7 +86,7 @@ Below TODO tasks are done -
 5. Logger and Exception handling.
 6. Junit test cases for positive senarios only.
 
-Kindly note, further code optimisations are possible, these are not done due to time constrant. Also code covereage can be increased by writing negtive test cases. Since Gradle and IntelliJIdea are new for me so consumed a significant time to convert pom.xml based Maven project.
+Kindly note, further code optimizations are possible, these are not done due to time constraint. Also, code coverage can be increased by writing negative test cases. Since Gradle and IntelliJ IDEA are new for me, so consumed a significant time to convert pom.xml based Maven project.
 
 I pushed two repositories for each-
 "https://github.com/sushilshakya-github/audition_api" is for Gradle and IntelliJIdea and 
