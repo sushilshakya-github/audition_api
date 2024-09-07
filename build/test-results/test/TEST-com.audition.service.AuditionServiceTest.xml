@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.audition.service.AuditionServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-09-06T10:25:55" hostname="DESKTOP-SUSHIL" time="0.907">
+<testsuite name="com.audition.service.AuditionServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-09-07T14:58:52" hostname="DESKTOP-SUSHIL" time="1.014">
   <properties/>
-  <testcase name="getPostById()" classname="com.audition.service.AuditionServiceTest" time="0.823"/>
-  <testcase name="getAllEmployee()" classname="com.audition.service.AuditionServiceTest" time="0.08"/>
-  <system-out><![CDATA[com.audition.model.AuditionPost@7c7a3454
-[com.audition.model.AuditionPost@4e8bc98f, com.audition.model.AuditionPost@4760099b]
+  <testcase name="getPostById()" classname="com.audition.service.AuditionServiceTest" time="0.824"/>
+  <testcase name="getAllPost()" classname="com.audition.service.AuditionServiceTest" time="0.118"/>
+  <testcase name="getPostComments()" classname="com.audition.service.AuditionServiceTest" time="0.018"/>
+  <testcase name="getCommentbyPostId()" classname="com.audition.service.AuditionServiceTest" time="0.028"/>
+  <system-out><![CDATA[com.audition.model.AuditionPost@6e692a8
+[com.audition.model.AuditionPost@815208f, com.audition.model.AuditionPost@5c5e7e49]
+[com.audition.model.AuditionComment@1eabefbc, com.audition.model.AuditionComment@e7f24fc]
+2024-09-07 20:28:53.171  INFO [audition-api,,] 10608 --- [    Test worker] com.audition.service.AuditionService     : getCommentbyPostId..
+[com.audition.model.AuditionComment@4627bd43, com.audition.model.AuditionComment@6fd1cd43]
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

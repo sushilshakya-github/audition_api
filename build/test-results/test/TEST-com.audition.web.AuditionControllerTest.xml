@@ -1,43 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.audition.web.AuditionControllerTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-09-06T10:26:00" hostname="DESKTOP-SUSHIL" time="1.746">
+<testsuite name="com.audition.web.AuditionControllerTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2024-09-07T14:58:56" hostname="DESKTOP-SUSHIL" time="1.938">
   <properties/>
-  <testcase name="getPostTest()" classname="com.audition.web.AuditionControllerTest" time="1.111"/>
-  <testcase name="getPostsByIdTest()" classname="com.audition.web.AuditionControllerTest" time="0.055"/>
-  <testcase name="getPostComments()" classname="com.audition.web.AuditionControllerTest" time="0.381"/>
-  <testcase name="getCommentByPostId()" classname="com.audition.web.AuditionControllerTest" time="0.177"/>
-  <system-out><![CDATA[2024-09-06 15:55:56.233  INFO [audition-api,,] 12180 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.audition.web.AuditionControllerTest]: AuditionControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2024-09-06 15:55:56.296  INFO [audition-api,,] 12180 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.audition.AuditionApplication for test class com.audition.web.AuditionControllerTest
-15:55:56,703 |-INFO in ch.qos.logback.core.joran.util.ConfigurationWatchListUtil@7093b1f5 - Adding [jar:file:/C:/Users/Sushil%20Shakya/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.0.3/d781e7afbeb3d05ce361e9cc4fa7d38b15fb3862/spring-boot-3.0.3.jar!/org/springframework/boot/logging/logback/defaults.xml] to configuration watch list.
-15:55:56,703 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@9f4a5b7 - URL [jar:file:/C:/Users/Sushil%20Shakya/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.0.3/d781e7afbeb3d05ce361e9cc4fa7d38b15fb3862/spring-boot-3.0.3.jar!/org/springframework/boot/logging/logback/defaults.xml] is not of type file
-15:55:56,708 |-INFO in ch.qos.logback.core.joran.action.ConversionRuleAction - registering conversion word clr with class [org.springframework.boot.logging.logback.ColorConverter]
-15:55:56,708 |-INFO in ch.qos.logback.core.joran.action.ConversionRuleAction - registering conversion word wex with class [org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter]
-15:55:56,708 |-INFO in ch.qos.logback.core.joran.action.ConversionRuleAction - registering conversion word wEx with class [org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter]
-15:55:56,711 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [console]
-15:55:56,711 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
-15:55:56,711 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
-15:55:56,718 |-WARN in ch.qos.logback.core.model.processor.AppenderModelHandler - Appender named [flatfile] not referenced. Skipping further processing.
-15:55:56,718 |-WARN in ch.qos.logback.core.model.processor.AppenderModelHandler - Appender named [logstash] not referenced. Skipping further processing.
-15:55:56,718 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.catalina.startup.DigesterFactory] to ERROR
-15:55:56,718 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@42bf77f3 - Propagating ERROR level on Logger[org.apache.catalina.startup.DigesterFactory] onto the JUL framework
-15:55:56,718 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.catalina.util.LifecycleBase] to ERROR
-15:55:56,719 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@42bf77f3 - Propagating ERROR level on Logger[org.apache.catalina.util.LifecycleBase] onto the JUL framework
-15:55:56,719 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.coyote.http11.Http11NioProtocol] to WARN
-15:55:56,719 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@42bf77f3 - Propagating WARN level on Logger[org.apache.coyote.http11.Http11NioProtocol] onto the JUL framework
-15:55:56,719 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.sshd.common.util.SecurityUtils] to WARN
-15:55:56,719 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@42bf77f3 - Propagating WARN level on Logger[org.apache.sshd.common.util.SecurityUtils] onto the JUL framework
-15:55:56,719 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.tomcat.util.net.NioSelectorPool] to WARN
-15:55:56,719 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@42bf77f3 - Propagating WARN level on Logger[org.apache.tomcat.util.net.NioSelectorPool] onto the JUL framework
-15:55:56,719 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.eclipse.jetty.util.component.AbstractLifeCycle] to ERROR
-15:55:56,719 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@42bf77f3 - Propagating ERROR level on Logger[org.eclipse.jetty.util.component.AbstractLifeCycle] onto the JUL framework
-15:55:56,719 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.hibernate.validator.internal.util.Version] to WARN
-15:55:56,719 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@42bf77f3 - Propagating WARN level on Logger[org.hibernate.validator.internal.util.Version] onto the JUL framework
-15:55:56,719 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.boot.actuate.endpoint.jmx] to WARN
-15:55:56,719 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@42bf77f3 - Propagating WARN level on Logger[org.springframework.boot.actuate.endpoint.jmx] onto the JUL framework
-15:55:56,719 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
-15:55:56,719 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@42bf77f3 - Propagating INFO level on Logger[ROOT] onto the JUL framework
-15:55:56,719 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [console] to Logger[ROOT]
-15:55:56,720 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@2bd9f1d3 - End of configuration.
-15:55:56,720 |-INFO in org.springframework.boot.logging.logback.SpringBootJoranConfigurator@50ab29b3 - Registering current configuration as safe fallback point
+  <testcase name="getPostTest()" classname="com.audition.web.AuditionControllerTest" time="0.803"/>
+  <testcase name="getPostsByIdTest()" classname="com.audition.web.AuditionControllerTest" time="0.075"/>
+  <testcase name="getPostComments()" classname="com.audition.web.AuditionControllerTest" time="0.09"/>
+  <testcase name="getCommentByPostId()" classname="com.audition.web.AuditionControllerTest" time="0.039"/>
+  <testcase name="getPostNodataFoundTest()" classname="com.audition.web.AuditionControllerTest" time="0.243"/>
+  <testcase name="filterParamNullTest()" classname="com.audition.web.AuditionControllerTest" time="0.145"/>
+  <testcase name="filterParamLengthTest()" classname="com.audition.web.AuditionControllerTest" time="0.097"/>
+  <testcase name="postIdNumericTest()" classname="com.audition.web.AuditionControllerTest" time="0.101"/>
+  <testcase name="postIdNotNumericTest()" classname="com.audition.web.AuditionControllerTest" time="0.041"/>
+  <testcase name="commentListNotNullNotEmptyTest()" classname="com.audition.web.AuditionControllerTest" time="0.04"/>
+  <testcase name="postIdValueGreaterThanZeroTest()" classname="com.audition.web.AuditionControllerTest" time="0.065"/>
+  <testcase name="getPostIdNotNullShouldNumericTest()" classname="com.audition.web.AuditionControllerTest" time="0.062"/>
+  <system-out><![CDATA[2024-09-07 20:28:53.242  INFO [audition-api,,] 10608 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.audition.web.AuditionControllerTest]: AuditionControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2024-09-07 20:28:53.325  INFO [audition-api,,] 10608 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.audition.AuditionApplication for test class com.audition.web.AuditionControllerTest
+20:28:53,789 |-INFO in ch.qos.logback.core.joran.util.ConfigurationWatchListUtil@67ced751 - Adding [jar:file:/C:/Users/Sushil%20Shakya/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.0.3/d781e7afbeb3d05ce361e9cc4fa7d38b15fb3862/spring-boot-3.0.3.jar!/org/springframework/boot/logging/logback/defaults.xml] to configuration watch list.
+20:28:53,789 |-INFO in ch.qos.logback.core.joran.spi.ConfigurationWatchList@6c5284e0 - URL [jar:file:/C:/Users/Sushil%20Shakya/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot/3.0.3/d781e7afbeb3d05ce361e9cc4fa7d38b15fb3862/spring-boot-3.0.3.jar!/org/springframework/boot/logging/logback/defaults.xml] is not of type file
+20:28:53,804 |-INFO in ch.qos.logback.core.joran.action.ConversionRuleAction - registering conversion word clr with class [org.springframework.boot.logging.logback.ColorConverter]
+20:28:53,804 |-INFO in ch.qos.logback.core.joran.action.ConversionRuleAction - registering conversion word wex with class [org.springframework.boot.logging.logback.WhitespaceThrowableProxyConverter]
+20:28:53,804 |-INFO in ch.qos.logback.core.joran.action.ConversionRuleAction - registering conversion word wEx with class [org.springframework.boot.logging.logback.ExtendedWhitespaceThrowableProxyConverter]
+20:28:53,804 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - Processing appender named [console]
+20:28:53,804 |-INFO in ch.qos.logback.core.model.processor.AppenderModelHandler - About to instantiate appender of type [ch.qos.logback.core.ConsoleAppender]
+20:28:53,804 |-INFO in ch.qos.logback.core.model.processor.ImplicitModelHandler - Assuming default type [ch.qos.logback.classic.encoder.PatternLayoutEncoder] for [encoder] property
+20:28:53,804 |-WARN in ch.qos.logback.core.model.processor.AppenderModelHandler - Appender named [flatfile] not referenced. Skipping further processing.
+20:28:53,804 |-WARN in ch.qos.logback.core.model.processor.AppenderModelHandler - Appender named [logstash] not referenced. Skipping further processing.
+20:28:53,804 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.catalina.startup.DigesterFactory] to ERROR
+20:28:53,804 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@56218181 - Propagating ERROR level on Logger[org.apache.catalina.startup.DigesterFactory] onto the JUL framework
+20:28:53,804 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.catalina.util.LifecycleBase] to ERROR
+20:28:53,804 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@56218181 - Propagating ERROR level on Logger[org.apache.catalina.util.LifecycleBase] onto the JUL framework
+20:28:53,804 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.coyote.http11.Http11NioProtocol] to WARN
+20:28:53,804 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@56218181 - Propagating WARN level on Logger[org.apache.coyote.http11.Http11NioProtocol] onto the JUL framework
+20:28:53,804 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.sshd.common.util.SecurityUtils] to WARN
+20:28:53,804 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@56218181 - Propagating WARN level on Logger[org.apache.sshd.common.util.SecurityUtils] onto the JUL framework
+20:28:53,804 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.apache.tomcat.util.net.NioSelectorPool] to WARN
+20:28:53,804 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@56218181 - Propagating WARN level on Logger[org.apache.tomcat.util.net.NioSelectorPool] onto the JUL framework
+20:28:53,804 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.eclipse.jetty.util.component.AbstractLifeCycle] to ERROR
+20:28:53,804 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@56218181 - Propagating ERROR level on Logger[org.eclipse.jetty.util.component.AbstractLifeCycle] onto the JUL framework
+20:28:53,804 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.hibernate.validator.internal.util.Version] to WARN
+20:28:53,804 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@56218181 - Propagating WARN level on Logger[org.hibernate.validator.internal.util.Version] onto the JUL framework
+20:28:53,804 |-INFO in ch.qos.logback.classic.model.processor.LoggerModelHandler - Setting level of logger [org.springframework.boot.actuate.endpoint.jmx] to WARN
+20:28:53,804 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@56218181 - Propagating WARN level on Logger[org.springframework.boot.actuate.endpoint.jmx] onto the JUL framework
+20:28:53,804 |-INFO in ch.qos.logback.classic.model.processor.RootLoggerModelHandler - Setting level of ROOT logger to INFO
+20:28:53,804 |-INFO in ch.qos.logback.classic.jul.LevelChangePropagator@56218181 - Propagating INFO level on Logger[ROOT] onto the JUL framework
+20:28:53,804 |-INFO in ch.qos.logback.core.model.processor.AppenderRefModelHandler - Attaching appender named [console] to Logger[ROOT]
+20:28:53,804 |-INFO in ch.qos.logback.core.model.processor.DefaultProcessor@2efcb323 - End of configuration.
+20:28:53,804 |-INFO in org.springframework.boot.logging.logback.SpringBootJoranConfigurator@300c9eef - Registering current configuration as safe fallback point
 
 
   .   ____          _            __ _ _
@@ -48,15 +56,16 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.3)
 
-2024-09-06 15:55:56.770  INFO [audition-api,,] 12180 --- [    Test worker] c.audition.web.AuditionControllerTest    : Starting AuditionControllerTest using Java 17.0.7 with PID 12180 (started by Sushil Shakya in F:\inteli_workspace\audition_api)
-2024-09-06 15:55:56.771  INFO [audition-api,,] 12180 --- [    Test worker] c.audition.web.AuditionControllerTest    : No active profile set, falling back to 1 default profile: "default"
-2024-09-06 15:55:56.778  INFO [audition-api,,] 12180 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2024-09-06 15:55:56.779  INFO [audition-api,,] 12180 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will try the next url if available
-2024-09-06 15:55:56.780  WARN [audition-api,,] 12180 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@235d0bb9 uris = array<String>['http://localhost:8888'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8888/audition-api/default": Connection refused: no further information
-2024-09-06 15:55:59.528  INFO [audition-api,,] 12180 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
-2024-09-06 15:55:59.528  INFO [audition-api,,] 12180 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
-2024-09-06 15:55:59.542  INFO [audition-api,,] 12180 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
-2024-09-06 15:56:00.269  INFO [audition-api,,] 12180 --- [    Test worker] c.audition.web.AuditionControllerTest    : Started AuditionControllerTest in 3.965 seconds (process running for 87.439)
+2024-09-07 20:28:53.890  INFO [audition-api,,] 10608 --- [    Test worker] c.audition.web.AuditionControllerTest    : Starting AuditionControllerTest using Java 17.0.7 with PID 10608 (started by Sushil Shakya in F:\inteli_workspace\audition_api)
+2024-09-07 20:28:53.890  INFO [audition-api,,] 10608 --- [    Test worker] c.audition.web.AuditionControllerTest    : No active profile set, falling back to 1 default profile: "default"
+2024-09-07 20:28:53.890  INFO [audition-api,,] 10608 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2024-09-07 20:28:53.890  INFO [audition-api,,] 10608 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://localhost:8888. Will try the next url if available
+2024-09-07 20:28:53.890  WARN [audition-api,,] 10608 --- [    Test worker] o.s.c.c.c.ConfigServerConfigDataLoader   : Could not locate PropertySource ([ConfigServerConfigDataResource@3ac0013a uris = array<String>['http://localhost:8888'], optional = true, profiles = list['default']]): I/O error on GET request for "http://localhost:8888/audition-api/default": Connection refused: no further information
+2024-09-07 20:28:56.509  INFO [audition-api,,] 10608 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2024-09-07 20:28:56.509  INFO [audition-api,,] 10608 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2024-09-07 20:28:56.525  INFO [audition-api,,] 10608 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 0 ms
+2024-09-07 20:28:56.975  INFO [audition-api,,] 10608 --- [    Test worker] c.audition.web.AuditionControllerTest    : Started AuditionControllerTest in 3.644 seconds (process running for 56.609)
+2024-09-07 20:28:57.191  INFO [audition-api,,] 10608 --- [    Test worker] com.audition.web.AuditionController      : getting posts..
 
 MockHttpServletRequest:
       HTTP Method = GET
@@ -68,7 +77,7 @@ MockHttpServletRequest:
 
 Handler:
              Type = com.audition.web.AuditionController
-           Method = com.audition.web.AuditionController#getPosts(Integer)
+           Method = com.audition.web.AuditionController#getPosts(String)
 
 Async:
     Async started = false
@@ -202,6 +211,351 @@ MockHttpServletResponse:
           Headers = [Content-Type:"application/json"]
      Content type = application/json
              Body = [{"postId":3,"id":11,"name":"Alex","email":"alex@xyz.com","body":"Comments Assignment work"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2024-09-07 20:28:58.065  INFO [audition-api,,] 10608 --- [    Test worker] com.audition.web.AuditionController      : getting posts..
+2024-09-07 20:28:58.125 ERROR [audition-api,,] 10608 --- [    Test worker] c.a.w.advice.ExceptionControllerAdvice   : System Exception: 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /posts
+       Parameters = {userId=[1]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.audition.web.AuditionController
+           Method = com.audition.web.AuditionController#getPosts(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.audition.common.exception.SystemException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/problem+json"]
+     Content type = application/problem+json
+             Body = {"type":"about:blank","title":"API Error Occurred","status":200,"detail":"No posts found for filter param: null","instance":"/posts"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2024-09-07 20:28:58.307  INFO [audition-api,,] 10608 --- [    Test worker] com.audition.web.AuditionController      : getting posts..
+2024-09-07 20:28:58.322 ERROR [audition-api,,] 10608 --- [    Test worker] c.a.w.advice.ExceptionControllerAdvice   : System Exception: 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /posts
+       Parameters = {filterParam=[2]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.audition.web.AuditionController
+           Method = com.audition.web.AuditionController#getPosts(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.audition.common.exception.SystemException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/problem+json"]
+     Content type = application/problem+json
+             Body = {"type":"about:blank","title":"API Error Occurred","status":200,"detail":"No posts found for filter param: 2","instance":"/posts"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2024-09-07 20:28:58.467  INFO [audition-api,,] 10608 --- [    Test worker] com.audition.web.AuditionController      : getting posts..
+2024-09-07 20:28:58.467 ERROR [audition-api,,] 10608 --- [    Test worker] c.a.w.advice.ExceptionControllerAdvice   : System Exception: 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /posts
+       Parameters = {filterParam=[eiku]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.audition.web.AuditionController
+           Method = com.audition.web.AuditionController#getPosts(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.audition.common.exception.SystemException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/problem+json"]
+     Content type = application/problem+json
+             Body = {"type":"about:blank","title":"API Error Occurred","status":200,"detail":"No posts found for filter param: eiku","instance":"/posts"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2024-09-07 20:28:58.553 ERROR [audition-api,,] 10608 --- [    Test worker] c.a.w.advice.ExceptionControllerAdvice   : System Exception: 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /posts/4/comments
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.audition.web.AuditionController
+           Method = com.audition.web.AuditionController#getPostComments(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.audition.common.exception.SystemException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/problem+json"]
+     Content type = application/problem+json
+             Body = {"type":"about:blank","title":"API Error Occurred","status":200,"detail":"No comments found for Post Id: 4","instance":"/posts/4/comments"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2024-09-07 20:28:58.665 ERROR [audition-api,,] 10608 --- [    Test worker] c.a.w.advice.ExceptionControllerAdvice   : System Exception: 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /posts/not%20num/comments
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.audition.web.AuditionController
+           Method = com.audition.web.AuditionController#getPostComments(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.audition.common.exception.SystemException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/problem+json"]
+     Content type = application/problem+json
+             Body = {"type":"about:blank","title":"API Error Occurred","status":400,"detail":"Invalid post Id: not num","instance":"/posts/not%20num/comments"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2024-09-07 20:28:58.665 ERROR [audition-api,,] 10608 --- [    Test worker] c.a.w.advice.ExceptionControllerAdvice   : System Exception: 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /comments
+       Parameters = {postId=[not num]}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.audition.web.AuditionController
+           Method = com.audition.web.AuditionController#getCommentByPostId(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.audition.common.exception.SystemException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/problem+json"]
+     Content type = application/problem+json
+             Body = {"type":"about:blank","title":"API Error Occurred","status":400,"detail":"Invalid postId: not num","instance":"/comments"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2024-09-07 20:28:58.727 ERROR [audition-api,,] 10608 --- [    Test worker] c.a.w.advice.ExceptionControllerAdvice   : System Exception: 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /posts/not%20num/comments
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.audition.web.AuditionController
+           Method = com.audition.web.AuditionController#getPostComments(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.audition.common.exception.SystemException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/problem+json"]
+     Content type = application/problem+json
+             Body = {"type":"about:blank","title":"API Error Occurred","status":400,"detail":"Invalid post Id: not num","instance":"/posts/not%20num/comments"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2024-09-07 20:28:58.781 ERROR [audition-api,,] 10608 --- [    Test worker] c.a.w.advice.ExceptionControllerAdvice   : System Exception: 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /posts/0
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.audition.web.AuditionController
+           Method = com.audition.web.AuditionController#getPostsById(Integer)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.audition.common.exception.SystemException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/problem+json"]
+     Content type = application/problem+json
+             Body = {"type":"about:blank","title":"API Error Occurred","status":400,"detail":"Invalid Id: 0","instance":"/posts/0"}
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+2024-09-07 20:28:58.872 ERROR [audition-api,,] 10608 --- [    Test worker] c.a.w.advice.ExceptionControllerAdvice   : System Exception: 
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /posts/null/comments
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.audition.web.AuditionController
+           Method = com.audition.web.AuditionController#getPostComments(String)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = com.audition.common.exception.SystemException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = [Content-Type:"application/problem+json"]
+     Content type = application/problem+json
+             Body = {"type":"about:blank","title":"API Error Occurred","status":400,"detail":"Invalid post Id: null","instance":"/posts/null/comments"}
     Forwarded URL = null
    Redirected URL = null
           Cookies = []
